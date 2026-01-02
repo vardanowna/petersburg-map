@@ -1,56 +1,25 @@
-ymaps.ready(init);
+import {
+  YMap,
+  YMapDefaultSchemeLayer,
+  YMapDefaultFeaturesLayer
+} from 'ymaps3';
 
-function init() {
-  const map = new ymaps.Map('map', {
-    center: [59.9386, 30.3141],
-    zoom: 11,
-    controls: []
-  });
+import customization from './customization.json' assert { type: 'json' };
 
-  map.setType('yandex#map');
-
-  map.options.set('styles', [
-    {
-      featureType: 'all',
-      elementType: 'geometry',
-      stylers: {
-        color: '#f5f7f9'
-      }
-    },
-    {
-      featureType: 'water',
-      elementType: 'geometry',
-      stylers: {
-        color: '#cfe3f1'
-      }
-    },
-    {
-      featureType: 'road',
-      elementType: 'geometry',
-      stylers: {
-        color: '#c2c7cc'
-      }
-    },
-    {
-      featureType: 'road',
-      elementType: 'labels',
-      stylers: {
-        color: '#7a7f85'
-      }
-    },
-    {
-      featureType: 'landscape.natural',
-      elementType: 'geometry',
-      stylers: {
-        color: '#eceff2'
-      }
-    },
-    {
-      featureType: 'poi',
-      elementType: 'all',
-      stylers: {
-        visibility: 'off'
-      }
+const map = new YMap(
+  document.getElementById('map'),
+  {
+    location: {
+      center: [30.3141, 59.9386],
+      zoom: 11
     }
-  ]);
-}
+  }
+);
+
+map.addChild(
+  new YMapDefaultSchemeLayer({
+    customization
+  })
+);
+
+map.addChild(new YMapDefaultFeaturesLayer());
