@@ -1,23 +1,19 @@
-const map = L.map('map', {
-  zoomControl: false,
-  minZoom: 10,
-  maxZoom: 14
-}).setView([59.9386, 30.3141], 11);
-
-L.tileLayer(
-  'https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=Vk2WuUzsjOcHeENR50mb',
-  {
-    tileSize: 512,
-    zoomOffset: -1
-  }
-).addTo(map);
-
-const bounds = [
-  [59.70, 29.30],
-  [60.20, 30.80]
-];
-
-map.setMaxBounds(bounds);
-map.on('drag', () => {
-  map.panInsideBounds(bounds, { animate: false });
-});
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Карта Петербурга</title>
+  <style>
+    html, body, #map {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  </style>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="main.js"></script>
+</body>
+</html>
