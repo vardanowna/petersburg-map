@@ -1,12 +1,4 @@
-import customization from './customization.json' assert { type: 'json' };
-
-await ymaps3.ready;
-
-const {
-  YMap,
-  YMapDefaultSchemeLayer,
-  YMapDefaultFeaturesLayer
-} = ymaps3;
+const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
 
 const map = new YMap(
   document.getElementById('map'),
@@ -18,10 +10,8 @@ const map = new YMap(
   }
 );
 
-map.addChild(
-  new YMapDefaultSchemeLayer({
-    customization
-  })
-);
+map.addChild(new YMapDefaultSchemeLayer({
+  customization: './customization.json'
+}));
 
 map.addChild(new YMapDefaultFeaturesLayer());
