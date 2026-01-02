@@ -1,60 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;1,400&display=swap');
-
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Cormorant Infant', serif;
-  background: #f6f8fb;
+  font-family: 'Playfair Display', serif;
 }
-
-body {
-  overflow: hidden;
-}
-
-/* ===== HEADER ===== */
 
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 96px;
-  padding: 20px 40px;
-  background: rgba(210, 225, 240, 0.65);
+  background: rgba(210, 225, 240, 0.6);
   backdrop-filter: blur(6px);
+  padding: 16px 24px;
   z-index: 10;
 }
 
 header h1 {
   margin: 0;
-  font-size: 32px;
-  font-weight: 600;
-  color: #2f3a44;
+  font-size: 28px;
 }
 
 header p {
   margin: 4px 0 0;
-  font-size: 16px;
-  font-style: italic;
-  color: #5a6a78;
+  font-size: 14px;
+  opacity: 0.7;
 }
-
-/* ===== MAP ===== */
 
 #map {
   position: absolute;
   top: 96px;
+  bottom: 96px;
   left: 0;
   right: 0;
-  bottom: 96px;
 }
-
-/* ===== FOOTER ===== */
 
 footer {
   position: fixed;
@@ -62,39 +43,47 @@ footer {
   left: 0;
   right: 0;
   height: 96px;
-  padding: 16px 40px;
-  background: rgba(210, 225, 240, 0.65);
+  background: rgba(210, 225, 240, 0.6);
   backdrop-filter: blur(6px);
-  z-index: 10;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 24px;
+  z-index: 10;
 }
 
-.footer-inner {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 16px;
+.seasons {
+  display: flex;
+  gap: 18px;
+  font-size: 16px;
+}
+
+.season {
+  opacity: 0.35;
+}
+
+.season.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.footer-right {
+  display: flex;
   align-items: center;
+  gap: 16px;
 }
 
 .footer-text {
-  text-align: right;
   font-size: 14px;
-  color: #2f3a44;
-  line-height: 1.4;
+  text-align: right;
 }
 
 .footer-text a {
-  color: #2f3a44;
   text-decoration: none;
-}
-
-.footer-text a:hover {
-  text-decoration: underline;
+  color: inherit;
 }
 
 .footer-qr img {
-  width: 72px;
-  height: 72px;
+  width: 36px;
+  height: 36px;
 }
