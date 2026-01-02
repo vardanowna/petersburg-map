@@ -5,7 +5,7 @@ const map = L.map('map', {
 }).setView([59.9386, 30.3141], 11);
 
 L.tileLayer(
-  'https://{s}.tile.openstreetmap.ru/{z}/{x}/{y}.png',
+  'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
   { attribution: '' }
 ).addTo(map);
 
