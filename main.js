@@ -1,10 +1,12 @@
-import {
-  YMap,
-  YMapDefaultSchemeLayer,
-  YMapDefaultFeaturesLayer
-} from 'ymaps3';
-
 async function init() {
+  await ymaps3.ready;
+
+  const {
+    YMap,
+    YMapDefaultSchemeLayer,
+    YMapDefaultFeaturesLayer
+  } = ymaps3;
+
   const response = await fetch('./customization.json');
   const customization = await response.json();
 
