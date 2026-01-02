@@ -39,17 +39,17 @@ function init() {
       }
     },
     {
-      featureType: 'poi',
-      elementType: 'all',
-      stylers: {
-        visibility: 'off'
-      }
-    },
-    {
       featureType: 'landscape.natural',
       elementType: 'geometry',
       stylers: {
         color: '#eceff2'
+      }
+    },
+    {
+      featureType: 'poi',
+      elementType: 'all',
+      stylers: {
+        visibility: 'off'
       }
     }
   ]);
