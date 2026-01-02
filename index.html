@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <title>Карта Петербурга</title>
 
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <link rel="stylesheet" href="styles.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 </head>
 
 <body>
@@ -24,14 +17,6 @@
 
   <div id="map"></div>
 
-  <div id="season-switcher">
-    <button class="active">Зима</button>
-    <button disabled>Весна</button>
-    <button disabled>Лето</button>
-    <button disabled>Осень</button>
-  </div>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
