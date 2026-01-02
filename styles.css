@@ -1,64 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;1,400&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  background: #f6f7f8;
-  color: #2b2b2b;
+  padding: 0;
+  height: 100%;
+  font-family: 'Cormorant Infant', serif;
+  background: #f6f8fb;
 }
 
-.site-header {
-  position: absolute;
-  top: 24px;
-  left: 32px;
+body {
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 96px;
+  padding: 20px 40px;
+  background: rgba(210, 225, 240, 0.65);
+  backdrop-filter: blur(6px);
   z-index: 10;
 }
 
-.site-header h1 {
+header h1 {
   margin: 0;
   font-size: 32px;
-  font-style: italic;
+  font-weight: 600;
+  color: #2f3a44;
 }
 
-.site-header p {
-  margin: 6px 0 0;
-  font-size: 14px;
-  opacity: 0.7;
+header p {
+  margin: 4px 0 0;
+  font-size: 16px;
+  font-style: italic;
+  color: #5a6a78;
 }
 
 #map {
-  width: 100vw;
-  height: 100vh;
-}
-
-.site-footer {
   position: absolute;
-  right: 24px;
-  bottom: 24px;
-  display: flex;
-  gap: 24px;
-  z-index: 10;
-  align-items: flex-end;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.footer-column {
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px 24px;
+  background: rgba(210, 225, 240, 0.65);
+  backdrop-filter: blur(6px);
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 16px;
+  align-items: end;
+  z-index: 10;
+}
+
+.footer-text {
   text-align: right;
   font-size: 14px;
+  color: #2f3a44;
 }
 
-.footer-column a {
-  color: inherit;
+.footer-text a {
+  color: #2f3a44;
   text-decoration: none;
 }
 
-.footer-column .year {
-  margin-top: 4px;
-  opacity: 0.6;
+.footer-text a:hover {
+  text-decoration: underline;
 }
 
-.footer-column img {
+.footer-qr img {
   width: 96px;
-  height: auto;
+  height: 96px;
 }
