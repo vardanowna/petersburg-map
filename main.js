@@ -1,4 +1,4 @@
-async function init() {
+(async () => {
   await ymaps3.ready;
 
   const {
@@ -7,26 +7,16 @@ async function init() {
     YMapDefaultFeaturesLayer
   } = ymaps3;
 
-  const response = await fetch('./customization.json');
-  const customization = await response.json();
-
   const map = new YMap(
     document.getElementById('map'),
     {
       location: {
-        center: [30.3141, 59.9386],
-        zoom: 11
+        center: [30.3158, 59.9398],
+        zoom: 10
       }
     }
   );
 
-  map.addChild(
-    new YMapDefaultSchemeLayer({
-      customization
-    })
-  );
-
+  map.addChild(new YMapDefaultSchemeLayer());
   map.addChild(new YMapDefaultFeaturesLayer());
-}
-
-init();
+})();
