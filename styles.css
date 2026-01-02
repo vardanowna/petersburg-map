@@ -62,3 +62,7 @@ header p {
   opacity: 0.4;
   cursor: default;
 }
+
+.leaflet-tile {
+  filter: grayscale(100%) brightness(1.08) contrast(0.9);
+}
